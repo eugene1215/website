@@ -100,12 +100,12 @@ res.render("user",{title:"Profile", userProfile: { nickname: "Eugene Ho" } })
  *  App Configuration
  */
 
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "src/views"));
 app.set("view engine", "pug");
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "src/public")));
 
 
-app.listen(port, hostname, () => {
+ app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}`);
-});
+}); 
 
