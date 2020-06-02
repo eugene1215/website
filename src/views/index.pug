@@ -1,0 +1,31 @@
+extends layout
+block layout-content
+  - var now = new Date()
+  - var noww = now.toDateString()
+  - var map;
+  div.View
+   div.View.WelcomeView 
+    h1.Banner Welcome to Eugene Page  
+    div.Message
+      div.Title   
+        h1 Today Is :
+        h2  #{noww}
+        //- h3 lat :
+        //- h3 lon :#{lon}
+      //- span.Details #{desc}
+
+    div.Message
+      div.Title   
+        h1 Hong Kong
+      span.Details Current Weather  : #{currTemp} c
+      //- span.Details  Max Temp: #{maxTemp} c
+      //- span.Details  Min Temp:#{minTemp} c
+      span.Details  humidity:  #{humidity} %
+
+    div.NavButtons
+      a(href="/user")
+        div.NavButton See My Detail
+
+    div.Footer
+      h4 made by Pug, Node.js, css
+          

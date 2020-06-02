@@ -1,0 +1,25 @@
+extends layout
+
+block layout-content
+  div.View.UserView
+    h1.Banner Hi By #{userProfile.nickname}!
+    div.List
+      div.Title
+        h1   #{userProfile.nickname}
+        h2   CV
+      //- pre.Details=JSON.stringify(userProfile, null, 2)
+    div.List
+      div.Title
+        h2 Education:
+        h3 Graduated Form Open University of Hong Kong
+        span.Details Familiar in React Native, Firebase, Node.js
+    div.List
+      div.Title
+        h2 Work Experence
+        span.Details Hosptial Authority in IT Department
+          p Site Troubleshoting
+          p Develop Internal Website
+    div.NavButtons
+      a(href="/")
+        div.NavButton Back
+   
